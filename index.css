@@ -13,17 +13,18 @@ header, p{
 }
 
 .card{
-    width: 600px;
-    height: 1161px;
+    width: 640px;
     background-color: white;
 }
 
 .header{
+    border: 1px red solid;
     background-image: url(./assets/burger-header.jpg);
     background-size: cover;
-    width: 600px;
+    width: 640px;
     height: 167px;
     color: white;
+    box-sizing: border-box;
 }
 
 .top-text{
@@ -42,11 +43,11 @@ header, p{
 
 .main {
     display: flex;
-    background-color: white;
-    width: 600px;
-    height: 1000px;
     flex-direction: column;
-    margin-left: 40px;
+    align-items: center;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    border: 1px solid red;
 }
 
 .img-food1{
@@ -92,15 +93,96 @@ header, p{
 }
 
 .add-btn{
-    color: 3C3C3C;
+    color: #3C3C3C;
     background-color: white;
-    font-size: 32px;
+    font-size: 40px;
+    line-height: 1;
     height: 50px;
     width: 50px;
-    border: 3px solid #DEDEDE;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #DEDEDE;
     border-radius: 250px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.add-btn:hover {
+    background-color: #f5f5f5;
+    border-color: #bdbdbd;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transform: scale(1.05);
+}
+
+.add-btn:active {
+    transform: scale(0.98);
+    background-color: #ebebeb;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
 
 .inner-items{
     width: 400;
+}
+
+.checkout-box{
+    margin: 0 auto;
+    width: 500px;
+    height: 300px;
+    border: 1px solid red;
+}
+
+.top-checkout-text{
+    display: block;
+    font-size:28px;
+    margin: 0 auto 64px auto;
+    width: max-content;
+
+}
+
+.added-items{
+    font-size: 23px;
+    width: 100%;
+}
+
+.checkout-barrier{
+    margin: 31px 0 14px 0; 
+    height: 2px;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.remove {
+    color: #BBBBBB;
+    font-size: 13px;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.remove:hover {
+    color: red;
+    transform: scale(1.05);
+}
+
+.remove:active {
+    color: red;
+    transform: scale(0.98);
+}
+
+.checkout-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    width: 100%;
+    margin: 0;
+}
+
+.checkout-price {
+    font-size: 23px;
+    margin: 0;
+    flex-shrink: 0;
 }
