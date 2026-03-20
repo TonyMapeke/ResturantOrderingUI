@@ -18,7 +18,6 @@ header, p{
 }
 
 .header{
-    border: 1px red solid;
     background-image: url(./assets/burger-header.jpg);
     background-size: cover;
     width: 640px;
@@ -47,7 +46,6 @@ header, p{
     align-items: center;
     padding-bottom: 40px;
     box-sizing: border-box;
-    border: 1px solid red;
 }
 
 .img-food1{
@@ -130,7 +128,6 @@ header, p{
     margin: 0 auto;
     width: 500px;
     height: 300px;
-    border: 1px solid red;
 }
 
 .top-checkout-text{
@@ -185,4 +182,32 @@ header, p{
     font-size: 23px;
     margin: 0;
     flex-shrink: 0;
+}
+
+.order-btn{
+    margin: 53 0 0 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: #16DB99;
+    transition: color 0.15s ease, transform 0.15s ease;
+
+}
+
+.order-btn:hover{
+    background-color: #12B880;
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+.order-btn:active{
+    background-color: #12B880;
+    cursor: pointer;
+    transform: scale(.98);
 }
